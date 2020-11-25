@@ -7,6 +7,7 @@ board_keys = []
 for key in theBoard:
     board_keys.append(key)
 
+
 def printBoard(board):
     print(board['7'] + '|' + board['8'] + '|' + board['9'])
     print('-+-+-')
@@ -33,50 +34,52 @@ def game():
             print("That place is already filled. Which place would you like to move to?")
             continue
 
+         
         if count >= 5:
-            if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ': # across the top
+            if theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ': 
                 printBoard(theBoard)
                 print("GAME OVER")                
                 print(" **** " +turn + " won. ****")                
                 break
-            elif theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ': # across the middle
+            elif theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ':
                 printBoard(theBoard)
                 print("GAME OVER")                
                 print(" **** " +turn + " won. ****")
                 break
-            elif theBoard['1'] == theBoard['2'] == theBoard['3'] != ' ': # across the bottom
+            elif theBoard['1'] == theBoard['2'] == theBoard['3'] != ' ': 
                 printBoard(theBoard)
                 print("GAME OVER")                
                 print(" **** " +turn + " won. ****")
                 break
-            elif theBoard['1'] == theBoard['4'] == theBoard['7'] != ' ': # down the left side
+            elif theBoard['1'] == theBoard['4'] == theBoard['7'] != ' ':
                 printBoard(theBoard)
                 print("GAME OVER")                
                 print(" **** " +turn + " won. ****")
                 break
-            elif theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ': # down the middle
+            elif theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ': 
                 printBoard(theBoard)
                 print("GAME OVER")                
                 print(" **** " +turn + " won. ****")
                 break
-            elif theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ': # down the right side
+            elif theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ':
                 printBoard(theBoard)
                 print("GAME OVER")                
                 print(" **** " +turn + " won. ****")
                 break 
-            elif theBoard['7'] == theBoard['5'] == theBoard['3'] != ' ': # diagonal
+            elif theBoard['7'] == theBoard['5'] == theBoard['3'] != ' ': 
                 printBoard(theBoard)
                 print("GAME OVER")                
                 print(" **** " +turn + " won. ****")
                 break
-            elif theBoard['1'] == theBoard['5'] == theBoard['9'] != ' ': # diagonal
+            elif theBoard['1'] == theBoard['5'] == theBoard['9'] != ' ': 
                 printBoard(theBoard)
                 print("GAME OVER")                
                 print(" **** " +turn + " won. ****")
                 break 
+
         if count == 9:
             print("GAME OVER")                
-            print("It's a Tie!!")
+            print("It's a tie")
 
         if turn =='X':
             turn = 'O'
