@@ -25,7 +25,7 @@ def int_calculator() :
 
     else :
         print("Error. The opperator you selected was invalid. Please try again")
-        calculator()
+        int_calculator()
 
 def flt_calculator():
     num1 = float(input("First number : "))
@@ -68,4 +68,3 @@ def str_or_flt():
         print("Error. " + str(type) + " is not a supported type of calculator. Please try again.")
         str_or_flt()
 
-str_or_flt()
